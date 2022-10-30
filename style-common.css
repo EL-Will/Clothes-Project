@@ -1,0 +1,236 @@
+.pre-mobile-menu{
+    position: absolute;
+    top:0;
+    right:0;
+    overflow-x: hidden;
+    width: 330px;
+    height:100vh;
+    background-color: white;
+    transform: translateX(330px);
+    transition: transform .25s;
+}
+.z10{
+    z-index: 10;
+    display: inline-block;
+}
+.pre-mobile-hide{
+    visibility: hidden;
+    width:0px;
+}
+.pre-mobile-show{
+    visibility: visible;
+    transform: translateX(0px);
+    transition: transform .25s;
+}
+.pre-panel {
+    position: absolute;
+    right: 0;
+    left: 0;
+    padding: 0 30px 150px 36px;
+    margin-top: 46px;
+    transform: translateX(0px);
+    transition: transform .25s;
+}
+.pre-panel-root {
+    margin-top: 0;
+    padding-top: 40px;
+}
+.pre-mobile-menu .close-nav-btn {
+    position: absolute;
+    right: 14px;
+    top: 8px;
+    margin-right: 10px;
+}
+.pre-btn-icon {
+    background: transparent;
+    vertical-align: middle;
+    flex: 0 0 auto;
+    color: rgba(0,0,0,.54);
+    padding: 8px;
+    text-align: center;
+    border-radius: 100px;
+    cursor: pointer;
+    margin: 0;
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+}
+.ripple {
+    overflow: hidden;
+    transform: translateZ(0);
+}
+.pre-close-icon {
+    transform: scale(1.3);
+    color: #111;
+}
+.pre-chevron.chev-root {
+    color: #111;
+}
+
+.pre-chevron{
+    color: #757575;
+}
+.d-sm-b {
+    display: block;
+}
+.pre-panel-root .pre-link-label, .pre-panel-root button.pre-link {
+    line-height: 1.166667;
+}
+.pre-panel .pre-link-label {
+    width: 100%;
+    text-align: left;
+}
+
+.headline-3 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+}
+button.nav-btn, button.pre-link {
+    background: transparent;
+}
+button.pre-link {
+    line-height: 1.166667;
+}
+.pre-panel-root .pre-link {
+    padding: 10px 0;
+}
+.flex-btn{
+    color: #111;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 4px 0;
+}
+a{
+    color: gray;
+}
+.content-expand a:hover{
+    color:black;
+}
+
+.icon-account-btn{
+    vertical-align: middle;
+    background: transparent;
+    flex: 0 0 auto;
+    color: rgba(0, 0, 0, .54);
+    padding: 6px;
+    margin-right: 2px;
+    text-align: center;
+    border-radius: 100px;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    height: 100%;
+}
+.icon-account-btn:hover{
+    background-color: gray;
+}
+.pre-account-item  {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.mr-account {
+    margin-right: 8px;
+}
+
+.ml-account {
+    margin-left: 8px;
+}
+
+.pre-account-item span {
+    font-size: 12px;
+    line-height: 36px;
+    color: #111;
+}
+.pre-account-item span:hover{
+    color: gray;
+}
+
+.pre-nav-design-icon{
+    color: #111;
+    width: 24px;
+    height: 24px;
+}
+.resize-frame-account {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    max-height: 36px;
+}
+.frame-flex-account{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+.pre-account-expand{
+    position: absolute;
+    min-width: 240px;
+    right: 0;
+    top: 36px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: opacity .2s,visibility 0s linear .2s,transform .25s ease;
+ 
+}
+.pre-account-expand-content {
+    background: #fff;
+    border-radius: 0 0 8px 8px;
+}
+.pt24-sm {
+    padding-top: 24px;
+}
+.pr24-sm {
+    padding-right: 24px;
+}
+.pb24-sm {
+    padding-bottom: 24px;
+}
+.pl24-sm{
+    padding-left: 24px;
+}
+.pre-acct-account li a{
+    font-size: 14px;
+    padding: 4px 8px;
+}
+.pl8-sm{
+    padding-left: 8px;
+}
+.logout-btn{
+    font-size: 13px;
+    color: gray;
+    padding: 4px 8px;
+    border: none;
+}
+.logout-btn:hover{
+    color:black;
+}
+
+.format-content-bag{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    display: block;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 10px;
+    top: 10px;
+    color: #111;
+}
+@media only screen and (min-width: 960px){
+.format-content-bag {
+    margin-top: 5px;
+}
+}
