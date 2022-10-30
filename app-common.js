@@ -197,12 +197,18 @@ function Logout(){
 }
 
 function clickFavorite(){
+    if(localStorage.getItem('boolLogin') === null){
+        localStorage.setItem('boolLogin',false);
+    }
     if(localStorage.getItem('boolLogin') === 'false'){
         window.location.assign('./singin/index-singin.html');
     }
 }
 
 function clickBag(){
+    if(localStorage.getItem('boolLogin') === null){
+        localStorage.setItem('boolLogin',false);
+    }
     if(localStorage.getItem('boolLogin') === 'false'){
         window.location.assign('./singin/index-singin.html');
     }
