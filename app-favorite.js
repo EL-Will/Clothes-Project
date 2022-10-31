@@ -2,6 +2,16 @@ let strProductsTotal = Number(localStorage.getItem('productsTotal'));
 let idTotalItems = document.getElementById('items-count-total');
 idTotalItems. innerHTML = `${strProductsTotal}`;
 
+// let strProductsTotal = (localStorage.getItem('productsTotal'));
+// if(strProductsTotal === null){
+//     let arrProductsIndexAccount = [];
+//     localStorage.setItem('productsTotal',JSON.stringify(arrProductsIndexAccount));
+// }
+// strProductsTotal = JSON.parse(localStorage.getItem('productsTotal'));
+// let indexAcc = Number(localStorage.getItem('userLogin'));
+// let idTotalItems = document.getElementById('items-count-total');
+// idTotalItems.innerHTML = `${strProductsTotal[indexAcc]}`;
+
 let menShoesProduct_items = document.getElementById('men-shoes-product_items');
 
 function showmenShoesProductsFavorite(sourceImg, nameType, price, sex, color, id) {

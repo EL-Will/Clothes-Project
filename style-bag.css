@@ -64,7 +64,11 @@
     color: gray;
 }
 .format-P4-bag, .format-P5-bag, .format-P2-bag, .format-P3-bag{
+    font-size: 20px;
     color:gray;
+}
+.format-P1-bag{
+    font-size: 20px;
 }
 .flex-P5-bag{
     margin-left: 30px;
@@ -116,5 +120,8 @@
 }
 .subtotal, .total{
     font-weight: 700;
+    font-size: 20px;
+}
+.price-bag{
     font-size: 20px;
 }

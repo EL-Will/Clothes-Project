@@ -1,3 +1,14 @@
+
+// let strProductsTotal = (localStorage.getItem('productsTotal'));
+// if(strProductsTotal === null){
+//     let arrProductsIndexAccount = [];
+//     localStorage.setItem('productsTotal',JSON.stringify(arrProductsIndexAccount));
+// }
+// strProductsTotal = JSON.parse(localStorage.getItem('productsTotal'));
+// let indexAcc = Number(localStorage.getItem('userLogin'));
+// let idTotalItems = document.getElementById('items-count-total');
+// idTotalItems.innerHTML = `${strProductsTotal[indexAcc]}`;
+
 let strProductsTotal = Number(localStorage.getItem('productsTotal'));
 let idTotalItems = document.getElementById('items-count-total');
 idTotalItems.innerHTML = `${strProductsTotal}`;
@@ -608,6 +619,15 @@ function bagBtn(clicked_id) {
 
         if (checkArrBag === null) {
             //=========== Update to Bag Items=============================
+            // strProductsTotal = JSON.parse(localStorage.getItem('productsTotal'));
+            // indexAcc = Number(localStorage.getItem('userLogin'));
+            // let numProductsTotal = strProductsTotal[indexAcc];
+            // numProductsTotal = numProductsTotal +1;
+            // strProductsTotal[indexAcc] = numProductsTotal;
+            // localStorage.setItem('productsTotal',JSON.stringify(strProductsTotal));
+            // let idTotalItems = document.getElementById('items-count-total');
+            // idTotalItems.innerHTML = `${numProductsTotal}`;
+
             strProductsTotal = Number(localStorage.getItem('productsTotal'));
             strProductsTotal = strProductsTotal + 1;
             let idTotalItems = document.getElementById('items-count-total');
@@ -629,6 +649,15 @@ function bagBtn(clicked_id) {
             let arrBag = JSON.parse(localStorage.getItem('Bag'));
             if (boolBag === true) {
                 //=========== Update to Bag Items=============================
+                // strProductsTotal = JSON.parse(localStorage.getItem('productsTotal'));
+                // indexAcc = Number(localStorage.getItem('userLogin'));
+                // let numProductsTotal = strProductsTotal[indexAcc];
+                // numProductsTotal = numProductsTotal +1;
+                // strProductsTotal[indexAcc] = numProductsTotal;
+                // localStorage.setItem('productsTotal',JSON.stringify(strProductsTotal));
+                // let idTotalItems = document.getElementById('items-count-total');
+                // idTotalItems.innerHTML = `${numProductsTotal}`;
+
                 strProductsTotal = Number(localStorage.getItem('productsTotal'));
                 strProductsTotal = strProductsTotal + 1;
                 let idTotalItems = document.getElementById('items-count-total');
@@ -641,6 +670,17 @@ function bagBtn(clicked_id) {
             }
             else {
                 //=========== Update to Bag Items=============================
+                // strProductsTotal = JSON.parse(localStorage.getItem('productsTotal'));
+                // indexAcc = Number(localStorage.getItem('userLogin'));
+                // let numProductsTotal = strProductsTotal[indexAcc];
+                // if (numProductsTotal > 0) {
+                //     numProductsTotal = numProductsTotal - 1;
+                // }
+                // strProductsTotal[indexAcc] = numProductsTotal;
+                // localStorage.setItem('productsTotal',JSON.stringify(strProductsTotal));
+                // let idTotalItems = document.getElementById('items-count-total');
+                // idTotalItems.innerHTML = `${numProductsTotal}`;
+
                 strProductsTotal = Number(localStorage.getItem('productsTotal'));
                 if (strProductsTotal > 0) {
                     strProductsTotal = strProductsTotal - 1;

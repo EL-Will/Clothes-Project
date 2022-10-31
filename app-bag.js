@@ -1,6 +1,16 @@
 let strProductsTotal = Number(localStorage.getItem('productsTotal'));
 let idTotalItems = document.getElementById('items-count-total');
-idTotalItems. innerHTML = `${strProductsTotal}`;
+idTotalItems.innerHTML = `${strProductsTotal}`;
+
+// let strProductsTotal = (localStorage.getItem('productsTotal'));
+// if(strProductsTotal === null){
+//     let arrProductsIndexAccount = [];
+//     localStorage.setItem('productsTotal',JSON.stringify(arrProductsIndexAccount));
+// }
+// strProductsTotal = JSON.parse(localStorage.getItem('productsTotal'));
+// let indexAcc = Number(localStorage.getItem('userLogin'));
+// let idTotalItems = document.getElementById('items-count-total');
+// idTotalItems.innerHTML = `${strProductsTotal[indexAcc]}`;
 
 function menShoesProductsBag(sourceImg, nameType, price, sex, color, id, count) {
 
@@ -94,14 +104,14 @@ if (strBagItems !== null) {
                 Subtotal = Subtotal + readBagItems[i].totalPrice;
                 // totalItems = totalItems + readBagItems[i].count;
             }
-            else{
+            else {
                 Subtotal = Subtotal + readBagItems[i].totalPrice;
                 let idPrice = document.getElementById(`price${i}`);
                 idPrice.innerText = `${formatCash(readBagItems[i].totalPrice.toString())}`;
                 // totalItems = totalItems + readBagItems[i].count;
             }
         }
-        
+
         let idSubtotal = document.getElementById('sub-price');
         idSubtotal.innerText = `${formatCash(Subtotal.toString())}`;
         let idTotal = document.getElementById('total-price');
@@ -154,17 +164,17 @@ function DeleteBtn(clicked_id) {
         readBagItems = JSON.parse(strBagItems);
         delete readBagItems[id].count;
         readBagItems[id].bag = false;
-        
+
         // change bag property in the favorite obj
         let checkArrFavorite = localStorage.getItem('Favorite');
         let arrFavorite;
-        if(checkArrFavorite !== null){
-            arrFavorite= JSON.parse(localStorage.getItem('Favorite'));
+        if (checkArrFavorite !== null) {
+            arrFavorite = JSON.parse(localStorage.getItem('Favorite'));
         }
-        if(arrFavorite.length > 0){
+        if (arrFavorite.length > 0) {
             let idItems = findNameProduct(readBagItems[id].id, arrFavorite);
-            
-            if(idItems !== -1){
+
+            if (idItems !== -1) {
                 arrFavorite[idItems].bag = false
             }
         }
@@ -186,10 +196,17 @@ function DeleteBtn(clicked_id) {
             idPrice.innerText = `${formatCash(readBagItems[i].totalPrice.toString())}`;
             totalItems = totalItems + readBagItems[i].count;
         }
+        // strProductsTotal = (localStorage.getItem('productsTotal'));
+        // indexAcc = Number(localStorage.getItem('userLogin'));
+        // strProductsTotal[indexAcc] = totalItems;
+        // localStorage.setItem('productsTotal', JSON.stringify(strProductsTotal));
+        // let idTotalItems = document.getElementById('items-count-total');
+        // idTotalItems. innerHTML = `${totalItems}`;
+
         localStorage.setItem('productsTotal', totalItems);
         strProductsTotal = Number(localStorage.getItem('productsTotal'));
         let idTotalItems = document.getElementById('items-count-total');
-        idTotalItems. innerHTML = `${strProductsTotal}`;
+        idTotalItems.innerHTML = `${strProductsTotal}`;
         let idSubtotal = document.getElementById('sub-price');
         idSubtotal.innerText = `${formatCash(Subtotal.toString())}`;
         let idTotal = document.getElementById('total-price');
@@ -242,11 +259,16 @@ function decrease(clicked_id) {
                 idPrice.innerText = `${formatCash(readBagItems[i].totalPrice.toString())}`;
                 totalItems = totalItems + readBagItems[i].count;
             }
-            
+            // strProductsTotal = (localStorage.getItem('productsTotal'));
+            // indexAcc = Number(localStorage.getItem('userLogin'));
+            // strProductsTotal[indexAcc] = totalItems;
+            // localStorage.setItem('productsTotal', JSON.stringify(strProductsTotal));
+            // let idTotalItems = document.getElementById('items-count-total');
+            // idTotalItems. innerHTML = `${totalItems}`;
             localStorage.setItem('productsTotal', totalItems);
             strProductsTotal = Number(localStorage.getItem('productsTotal'));
             let idTotalItems = document.getElementById('items-count-total');
-            idTotalItems. innerHTML = `${strProductsTotal}`;
+            idTotalItems.innerHTML = `${strProductsTotal}`;
             let idSubtotal = document.getElementById('sub-price');
             idSubtotal.innerText = `${formatCash(Subtotal.toString())}`;
             let idTotal = document.getElementById('total-price');
@@ -279,25 +301,31 @@ function increase(clicked_id) {
             idPrice.innerText = `${formatCash(currentPrice.toString())}`;
             localStorage.setItem('Bag', (JSON.stringify(readBagItems)));
         }
-         // Update Subtotal and Total price
-         let Subtotal = 0;
-         let totalItems = 0;
-         strBagItems = localStorage.getItem('Bag');
-         readBagItems = JSON.parse(strBagItems);
-         for (let i = 0; i < readBagItems.length; i++) {
-             Subtotal = Subtotal + readBagItems[i].totalPrice;
-             let idPrice = document.getElementById(`price${i}`);
-             idPrice.innerText = `${formatCash(readBagItems[i].totalPrice.toString())}`;
-             totalItems = totalItems + readBagItems[i].count;
-         }
-         localStorage.setItem('productsTotal', totalItems);
-         strProductsTotal = Number(localStorage.getItem('productsTotal'));
-         let idTotalItems = document.getElementById('items-count-total');
-         idTotalItems. innerHTML = `${strProductsTotal}`;
-         let idSubtotal = document.getElementById('sub-price');
-         idSubtotal.innerText = `${formatCash(Subtotal.toString())}`;
-         let idTotal = document.getElementById('total-price');
-         idTotal.innerText = `${formatCash(Subtotal.toString())}`;
+        // Update Subtotal and Total price
+        let Subtotal = 0;
+        let totalItems = 0;
+        strBagItems = localStorage.getItem('Bag');
+        readBagItems = JSON.parse(strBagItems);
+        for (let i = 0; i < readBagItems.length; i++) {
+            Subtotal = Subtotal + readBagItems[i].totalPrice;
+            let idPrice = document.getElementById(`price${i}`);
+            idPrice.innerText = `${formatCash(readBagItems[i].totalPrice.toString())}`;
+            totalItems = totalItems + readBagItems[i].count;
+        }
+        // strProductsTotal = (localStorage.getItem('productsTotal'));
+        // indexAcc = Number(localStorage.getItem('userLogin'));
+        // strProductsTotal[indexAcc] = totalItems;
+        // localStorage.setItem('productsTotal', JSON.stringify(strProductsTotal));
+        // let idTotalItems = document.getElementById('items-count-total');
+        // idTotalItems. innerHTML = `${totalItems}`;
+        localStorage.setItem('productsTotal', totalItems);
+        strProductsTotal = Number(localStorage.getItem('productsTotal'));
+        let idTotalItems = document.getElementById('items-count-total');
+        idTotalItems.innerHTML = `${strProductsTotal}`;
+        let idSubtotal = document.getElementById('sub-price');
+        idSubtotal.innerText = `${formatCash(Subtotal.toString())}`;
+        let idTotal = document.getElementById('total-price');
+        idTotal.innerText = `${formatCash(Subtotal.toString())}`;
     }
 }
 
