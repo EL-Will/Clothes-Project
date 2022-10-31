@@ -236,7 +236,15 @@ let classMenShoes = document.getElementById('title-men-shoes');
 classMenShoes.innerText = `Men's Shoes(${menShoesProducts.length})`;
 
 let checkArrFavorite = localStorage.getItem('Favorite');
+if(checkArrFavorite === null){
+    let newArr =[];
+    localStorage.setItem('Favorite', JSON.stringify(newArr))
+}
 let checkArrBag = localStorage.getItem('Bag');
+if(checkArrBag === null){
+    let newArr =[];
+    localStorage.setItem('Bag', JSON.stringify(newArr))
+}
 console.log(checkArrBag);
 if (checkArrFavorite !== null && checkArrBag === null) {
     let temporaryArrFavorite = JSON.parse(checkArrFavorite);
